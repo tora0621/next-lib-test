@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--color-text);
 }
 
 .footer {
@@ -26,10 +27,11 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  color: var(--color-text);
 }
 
 .title a {
-  color: #0070f3;
+  color: var(--color-link);
   text-decoration: none;
 }
 
@@ -57,7 +59,7 @@
 }
 
 .code {
-  background: #fafafa;
+  /* background: #fafafa; */
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
@@ -88,8 +90,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: var(--color-link);
+  border-color: var(--color-link);
 }
 
 .card h2 {
@@ -102,10 +104,13 @@
   font-size: 1.25rem;
   line-height: 1.5;
 }
-
+/* footerロゴsvg */
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+.logo img {
+  filter: var(--img-invert);
 }
 
 @media (max-width: 600px) {
