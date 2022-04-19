@@ -24,7 +24,6 @@ export default function SwitchingTheme() {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
   };
-  // console.log('test');
   setTheme(getTheme());
 
   return (
