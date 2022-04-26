@@ -1,3 +1,5 @@
+import s from '../styles/switching-btn.module.scss';
+
 export const switchingThemeTest = () => {
   //data属性にthemeを設定,local storageに保存
   const setTheme = (newTheme: string) => {
@@ -21,21 +23,9 @@ export const switchingThemeTest = () => {
 
   return (
     <>
-      <button type='button' onClick={changeTheme}>
+      <button type='button' onClick={changeTheme} className={s.button}>
         Change Theme
       </button>
-      <style jsx>{`
-        button {
-          border: 0;
-          cursor: pointer;
-          outline: none;
-          padding: 10px 15px;
-          appearance: none;
-          background-color: var(--color-link);
-          border-radius: 5px;
-          color: var(--color-button-text);
-        }
-      `}</style>
     </>
   );
 };
