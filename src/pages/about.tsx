@@ -2,8 +2,10 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '../styles/Home.module.css';
 import dynamic from 'next/dynamic';
+import styles from '../styles/Home.module.scss';
+//component
+import Button from '../components/btn';
 //lib
 import { motion } from 'framer-motion';
 
@@ -25,12 +27,13 @@ const Home: NextPage = () => {
 
         <main className={styles.main}>
           <h1 className={styles.title}>About Page</h1>
-          <Link href={`/`}>
+          <Link href={`/`} scroll={false}>
             <a className={styles.link}>Index Link</a>
           </Link>
           <p className={styles.description}>
             <DynamicComponent />
           </p>
+          <Button text={'ボタンコンポーネントテスト'}></Button>
         </main>
 
         <footer className={styles.footer}>
