@@ -6,11 +6,24 @@ import dynamic from 'next/dynamic';
 import styles from '../styles/Home.module.scss';
 //component
 import Button from '../components/btn';
+import Slider from '../components/slider';
 //lib
 import { motion } from 'framer-motion';
 
+type test = {
+  img: string;
+  title: string;
+};
+
+//スライダー画像urlとalt（componentsに渡す）
+const SliderData: { img: string; title: string }[] = [
+  { img: 'https://placekitten.com/1920/800', title: 'slider1' },
+  { img: 'https://placekitten.com/g/1920/800', title: 'slider2' },
+];
+const test = ['https://placekitten.com/1920/800'];
 const Home: NextPage = () => {
   const DynamicComponent = dynamic(() => import('../components/switching-theme'));
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -18,6 +31,7 @@ const Home: NextPage = () => {
       exit={{ opacity: 0 }}
       transition={{ ease: 'easeInOut', duration: 1 }}
     >
+      <Slider data={SliderData}></Slider>
       <div className={styles.container}>
         <Head>
           <title>Create Next App</title>
