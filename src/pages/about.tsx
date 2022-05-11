@@ -20,7 +20,7 @@ const SliderData: { img: string; title: string }[] = [
   { img: 'https://placekitten.com/1920/800', title: 'slider1' },
   { img: 'https://placekitten.com/g/1920/800', title: 'slider2' },
 ];
-const test = ['https://placekitten.com/1920/800'];
+// const test = ['https://placekitten.com/1920/800'];
 const Home: NextPage = () => {
   const DynamicComponent = dynamic(() => import('../components/switching-theme'));
 
